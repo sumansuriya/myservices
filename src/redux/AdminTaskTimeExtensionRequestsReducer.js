@@ -39,7 +39,7 @@ export const getAllTaskTimeExtensionRequestsAction = () => {
 export function AdminTaskTimeExtensionRequestsReducer(state = initState, action) {
   switch (action.type) {
     case ADMIN_GET_ALL_TASK_TIME_EXTENSION_REQUESTS_ACTION_TYPE:
-      return { ...state, TaskExtensionRequestList: action.payload };
+      return { ...state, AdminTaskExtensionRequestList: action.payload };
       
     default:
       return state;

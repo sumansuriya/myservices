@@ -64,7 +64,7 @@ export const EmployeeTaskList = () => {
               <td>{item.projectid}</td>
               <td>{item.startDate}</td>
               <td>{item.deadLine}</td>
-              <td>{item.emp.empid}</td>
+              <td>{item.empid}</td>
 
               <td>
                 <input

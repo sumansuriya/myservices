@@ -3,8 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import {
   getAllTaskTimeExtensionRequestsAction,
-  
 } from "../redux/AdminTaskTimeExtensionRequestsReducer";
+import{
+  updateRenderAction,
+} from "../redux/EmployeeRequestReducer";
 import { AppNav } from "./AppNav";
 
 export const AdminTaskExtensionRequestList = () => {
@@ -19,14 +21,14 @@ export const AdminTaskExtensionRequestList = () => {
  
 
   // 2
-  const updateTask = (item) => {
+  const updateRequest = (item) => {
     console.log("Update Record", item);
 
     // 3 :: updating the store
     dispatch(updateRenderAction(item));
 
     // navigateing to the page
-    history.push("/employee-task-add");
+    history.push("/employee-request-add");
   };
 
   console.log(state. adminTaskTimeExtensionRequest.AdminTaskExtensionRequestList);
@@ -55,7 +57,7 @@ export const AdminTaskExtensionRequestList = () => {
               <td>{item.status}</td>
               <td>{item.reason}</td>
               <td>{item.taskExtensionDate}</td>
-              <td>{item.task.taskid}</td>
+              <td>{item.task.taskId}</td>
 
               <td>
                 <input
@@ -63,7 +65,7 @@ export const AdminTaskExtensionRequestList = () => {
                   value="Update"
                   className="btn btn-outline-success btn-sm  mr-1"
                   // onClick={updateRecord} :1
-                  onClick={() => updateTask(item)}
+                  onClick={() => updateRequest(item)}
                 />
               </td>
               
