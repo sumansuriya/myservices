@@ -56,7 +56,7 @@ export const AdminSignUp = () => {
     >
       <div className="w-50">
         <h2 className="text-center alert alert-info">
-          TMS SIGN UP
+          ADMIN SIGN UP
         </h2>
 
         {state.admin.progress===true && (

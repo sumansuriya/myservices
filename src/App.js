@@ -18,6 +18,8 @@ import { EmployeeTaskList } from "./pages/EmployeeTaskList";
 import { EmployeeTaskAdd } from "./pages/EmployeeTaskAdd";
 import{EmployeeTimeExtensionRequestAdd} from "./pages/EmployeeTimeExtensionRequestAdd";
 import{ AdminTaskExtensionRequestList} from "./pages/AdminTaskExtensionRequestList";
+import{EmployeeStatusCheckList} from "./pages/EmployeeStatusCheckList";
+import{EmployeeTimeExtensionStatusCheck} from "./pages/EmployeeTimeExtensionStatusCheck"
 function App() {
   const history = useHistory();
   const state = useSelector((state) => state);
@@ -48,6 +50,9 @@ function App() {
       <Route exact path="/employee-task-add" component={EmployeeTaskAdd} />
       <Route exact path="/employee-request-list" component={AdminTaskExtensionRequestList} />
       <Route exact path="/employee-request-add" component={EmployeeTimeExtensionRequestAdd} />
+      <Route exact path="/employee-status-checklist" component={EmployeeStatusCheckList} />
+      <Route exact path="/employee-status-checkform" component={EmployeeTimeExtensionStatusCheck} />
+
     </>
   );
 }

@@ -62,7 +62,12 @@ export const AppNav = () => {
           <Nav.Link  onClick={clearEmployeeRequestURef} >
             Employee Request Add
           </Nav.Link>
-
+          <Nav.Link as={Link} to="/employee-status-checklist">
+            Employee Status Check List
+          </Nav.Link>
+          <Nav.Link as={Link} to="/employee-status-checkform">
+            Employee Status Check Form
+          </Nav.Link>
           <Nav.Link onClick={signOut}>Sign Out</Nav.Link>
         </Nav>
       </Navbar.Collapse>
