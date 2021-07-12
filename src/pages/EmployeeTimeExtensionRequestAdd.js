@@ -128,7 +128,17 @@ export const EmployeeTimeExtensionRequestAdd = () => {
           />
         </div>
         <div>
-       
+        {state.employeeRequest.uref.requestid ? (
+         
+          <input
+          type="text"
+          value={status}
+          onChange={updateStatus}
+          className="form-control form-control-lg mb-1"
+          placeholder="Enter status"
+          required
+         
+        /> ) : (
         <input
             type="text"
             value="Approval Pending for Time Extension"
@@ -136,7 +146,7 @@ export const EmployeeTimeExtensionRequestAdd = () => {
             className="form-control form-control-lg mb-1"
             placeholder="Enter status"
             required
-          />
+          />)}
         </div>
 
 
