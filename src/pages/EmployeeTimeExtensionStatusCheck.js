@@ -69,6 +69,7 @@ export const EmployeeTimeExtensionStatusCheck = () => {
             <input
               type="button"
               value="check "
+              onChange={CheckList}
               className="btn btn-info btn-lg w-100"
             />
             </Link>

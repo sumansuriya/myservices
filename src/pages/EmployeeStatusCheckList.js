@@ -34,7 +34,6 @@ export const EmployeeStatusCheckList = () => {
             <th scope="col">reason</th>
             <th scope="col">taskExtensionDate</th>
             <th scope="col">taskid</th>
-            <th scope="col">Actions</th>
           </tr>
         
         </thead>
