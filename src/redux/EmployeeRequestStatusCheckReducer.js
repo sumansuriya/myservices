@@ -14,7 +14,7 @@ const EMPLOYEE_GET_ALL_REQUESTS_BY_TASK_ID_ACTION_TYPE = "EMPLOYEE_GET_ALL_REQUE
 export const getAllEmployeeRequestsCheckAction = (payload) => {
     return async (dispatch) => {
       // API CALL :: FETCH RECORDS
-      const url = `http://localhost:8080/api/v1/request/task/${payload.taskId}`;
+      const url = `http://localhost:8080/api/v1/request/task/${payload.task.taskId}`;
       const response = await axios.get(url,payload);
   
       // console.log(response);
