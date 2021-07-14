@@ -3,7 +3,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import {
   getAllTaskTimeExtensionRequestsAction,
+
 } from "../redux/AdminTaskTimeExtensionRequestsReducer";
+import {
+  getAllEmployeeRequestsCheckAction,
+  deleteRequestAction
+
+} from "../redux/EmployeeRequestStatusCheckReducer";
+
 
 import { AppNav } from "./AppNav";
 
@@ -15,6 +22,13 @@ export const EmployeeStatusCheckList = () => {
   useEffect(() => {
     dispatch(getAllTaskTimeExtensionRequestsAction());
   }, []);
+
+  const deleteRecord = (item) => {
+    console.log("DELETE RECORD", item.requestid);
+    // dispatch the call.
+    dispatch(deleteRequestAction(item));
+  };
+
 
  
 
@@ -34,6 +48,7 @@ export const EmployeeStatusCheckList = () => {
             <th scope="col">reason</th>
             <th scope="col">taskExtensionDate</th>
             <th scope="col">taskid</th>
+            <th scope="col">Actions</th>
           </tr>
         
         </thead>
@@ -45,6 +60,16 @@ export const EmployeeStatusCheckList = () => {
               <td>{item.reason}</td>
               <td>{item.taskExtensionDate}</td>
               <td>{item.task.taskId}</td>
+              <td>
+                
+                <input
+                  type="button"
+                  value="Delete"
+                  // onClick={deleteRecord}
+                  onClick={() => deleteRecord(item)}
+                  className="btn btn-outline-danger btn-sm"
+                />
+              </td>
 
               
             </tr>

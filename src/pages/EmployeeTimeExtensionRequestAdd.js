@@ -138,19 +138,10 @@ export const EmployeeTimeExtensionRequestAdd = () => {
              
               
             </select>
-            
-            // <input
-            //   type="text"
-            //   value={status}
-            //   onChange={updateStatus}
-            //   className="form-control form-control-lg mb-1"
-            //   placeholder="Enter status"
-            //   required
-            // />
           ) : (
             <input
               type="text"
-              value="Approval Pending for Time Extension"
+              value="Approval Pending for Time Extension "
               onChange={updateStatus}
               className="form-control form-control-lg mb-1"
               placeholder="Enter status"
