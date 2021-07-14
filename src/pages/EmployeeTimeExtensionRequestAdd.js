@@ -6,6 +6,7 @@ import {
   updateEmployeeTaskExtensionRequestAction,
 } from "../redux/EmployeeRequestReducer";
 import { AppNav } from "./AppNav";
+import {Select} from "react-select";
 
 export const EmployeeTimeExtensionRequestAdd = () => {
   const dispatch = useDispatch();
@@ -123,27 +124,29 @@ export const EmployeeTimeExtensionRequestAdd = () => {
         </div>
         <div >
           {state.employeeRequest.uref.requestid ? (
-            //          <select
-            //           className="custom-select"
-            //            onChange={(e)=>{
-            //            const selectedStatus=e.target.value;
-            //            setStatus(selectedStatus);
-
-            //          }}>
+                     <select
+                      className="custom-select"
+                       onChange={(e)=>{
+                       const selectedStatus=e.target.value;
+                       setStatus(selectedStatus);
                        
-            //   <option value="REJECTED">REJECT</option>
-            //   <option value="APPROVED">APPROVE</option>
+                     }}>
+                        <option value="">SELECT</option>
+                       <option value="REJECTED">REJECT</option>
+
+                       <option value="APPROVED">APPROVE</option>
+             
               
-            // </select>
+            </select>
             
-            <input
-              type="text"
-              value={status}
-              onChange={updateStatus}
-              className="form-control form-control-lg mb-1"
-              placeholder="Enter status"
-              required
-            />
+            // <input
+            //   type="text"
+            //   value={status}
+            //   onChange={updateStatus}
+            //   className="form-control form-control-lg mb-1"
+            //   placeholder="Enter status"
+            //   required
+            // />
           ) : (
             <input
               type="text"
