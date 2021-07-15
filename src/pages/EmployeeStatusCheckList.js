@@ -20,7 +20,7 @@ export const EmployeeStatusCheckList = () => {
   const state = useSelector((state) => state);
 
   useEffect(() => {
-    dispatch(getAllTaskTimeExtensionRequestsAction());
+    dispatch( getAllTaskTimeExtensionRequestsAction());
   }, []);
 
   const deleteRecord = (item) => {

@@ -101,31 +101,34 @@ export const EmployeeTimeExtensionRequestAdd = () => {
       )}
 
       <form ref={formEl} className="mx-4 needs-validation" noValidate>
-        <div>
-          <div className="text-light">Enter ExtensionDate :</div>
-          <input
-            type="date"
-            value={taskExtensionDate}
-            onChange={updateTaskExtensionDate}
-            className="form-control form-control-lg mb-1"
-            placeholder="Enter Task Extension Date"
-            required
-          />
-        </div>
-        <div>
+      
+         
+        
+          <div className="row mb-1 justify-content-center">
           <input
             type="text"
             value={reason}
             onChange={updateReason}
-            className="form-control form-control-lg mb-1"
+            className="form-control form-control-lg mb-1  w-50"
             placeholder="Enter Reason"
             required
           />
         </div>
-        <div >
+        <h5 className="text-light text-center">Enter ExtensionDate </h5>
+          <div className="row mb-1 justify-content-center">
+          <input
+            type="date"
+            value={taskExtensionDate}
+            onChange={updateTaskExtensionDate}
+            className="form-control form-control-lg mb-1 w-50"
+            placeholder="Enter Task Extension Date"
+            required
+          />
+          </div>
+        <div className="row mb-1 justify-content-center">
           {state.employeeRequest.uref.requestid ? (
                      <select
-                      className="custom-select"
+                      className="custom-select  w-50"
                        onChange={(e)=>{
                        const selectedStatus=e.target.value;
                        setStatus(selectedStatus);
@@ -143,38 +146,38 @@ export const EmployeeTimeExtensionRequestAdd = () => {
               type="text"
               value="Approval Pending for Time Extension "
               onChange={updateStatus}
-              className="form-control form-control-lg mb-1"
+              className="form-control form-control-lg mb-1  w-50"
               placeholder="Enter status"
               required
             />
           )}
         </div>
 
-        <div>
+        <div className="row mb-1 justify-content-center">
           <input
             type="text"
             value={task}
             onChange={updateTask}
-            className="form-control form-control-lg mb-1"
+            className="form-control form-control-lg mb-1 w-50"
             placeholder="Enter Task Id"
             required
           />
         </div>
 
-        <div>
+        <div className="row mb-1 justify-content-center">
           {state.employeeRequest.uref.requestid ? (
             <input
               type="button"
               onClick={updateEmployeeTaskExtensionRequest}
               value="Update Employee Request"
-              className="btn btn-lg btn-secondary w-100"
+              className="btn btn-lg btn-info w-50"
             />
           ) : (
             <input
               type="button"
               onClick={addNewRequest}
               value="Add New Request"
-              className="btn btn-lg btn-secondary w-100"
+              className="btn btn-lg btn-success w-50"
             />
           )}
         </div>

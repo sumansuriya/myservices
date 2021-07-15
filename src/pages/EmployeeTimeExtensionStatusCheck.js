@@ -26,7 +26,7 @@ export const EmployeeTimeExtensionStatusCheck = () => {
     if (isFormValid)
      {
       // dispatch the call to redux ::for API CALL
-      dispatch(getAllEmployeeRequestsCheckAction({taskId }));
+      dispatch(getAllEmployeeRequestsCheckAction({taskId :task} ));
 
       // clear the form
       setTaskId("");
@@ -44,20 +44,20 @@ export const EmployeeTimeExtensionStatusCheck = () => {
       style={{ height: "100vh" }}
     >
       <div className="w-50">
-      <h2 className="text-center alert alert-info">
+      <h4 className="text-center alert alert-transparent text-light">
           Employee Request Status Check
-        </h2>
+        </h4>
        
 
         <form ref={formEl} className="needs-validation" noValidate>
         
-          <div>
+        <div className="row mb-1 justify-content-center">
             <input
               type="text"
               value={taskId}
               onChange={updateTaskId}
               placeholder="Enter TaskId"
-              className="form-control form-control-lg mb-1"
+              className="form-control form-control-lg mb-1 w-75"
               required
             />
           </div>
@@ -66,13 +66,14 @@ export const EmployeeTimeExtensionStatusCheck = () => {
           <div>
          
             <Link to="/employee-status-checklist">
-           
+            <div className="row mb-1 justify-content-center">
             <input
               type="button"
               value="check "
               onChange={CheckList}
-              className="btn btn-info btn-lg w-100"
+              className="btn btn-success btn-lg w-75"
             />
+            </div>
             </Link>
           </div>
 
